@@ -1,0 +1,237 @@
+/* Basic Reset & Body Styles */
+* {
+  margin: 0px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* A generic sans-serif font */
+  line-height: 1;
+  background-color: #000000; /* Light gray background */
+  color: #ff6600;
+}
+
+.container {
+  width: 100vw;
+  height: auto;
+  font-size: 15px;
+  max-width: 2200px;
+  margin: auto;
+  overflow: hidden; /* Clear floats */
+  padding: 10px 0;
+}
+
+/* Header Styles */
+.main-header {
+  width: 100%;
+  background: #000; /* Black header */
+  color: #fff;
+  padding: 0px;
+  border-bottom: 0px solid #ffcc00; /* Example accent color */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo {
+  font-size: 1.8em;
+  margin: 0;
+  color: #fff;
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #ffcc00; /* Hover effect */
+}
+
+/* Section Styling */
+section {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #333;
+  border-bottom: 1px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Hero Section (Home) */
+.hero-section {
+  background-color: #121ce2;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero-section .home-hero p {
+  font-size: 10px; /* Larger "홈" */
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Portfolio Grid (Analog, Video, Digital) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.portfolio-item {
+  padding: 10px;
+  text-align: center;
+}
+
+.placeholder-box {
+  width: 100%;
+  padding-bottom: 100%; /* Creates a square aspect ratio */
+  background-color: #ccc; /* Light gray placeholder for images */
+  margin-bottom: 5px;
+  border: 1px solid #999;
+}
+
+.portfolio-item h3 {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+/* Item Details */
+.item-details {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.item-details h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.item-details .medium {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.item-details p {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+/* About Section */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.about-section ul li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-left: 5px solid #ffcc00;
+}
+
+/* Contact Section */
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.contact-info p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.chat-prompt {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
