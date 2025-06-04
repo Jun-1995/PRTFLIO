@@ -9,11 +9,14 @@ body {
   font-family: Arial, sans-serif; /* A generic sans-serif font */
   line-height: 1;
   background-color: #000000; /* Light gray background */
-  color: #ff6600;
+}
+
+section {
+  min-height: 100vh;
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   height: auto;
   font-size: 15px;
   max-width: 2200px;
@@ -90,14 +93,22 @@ section h2 {
 }
 
 /* Hero Section (Home) */
+
 .hero-section {
   background-color: #121ce2;
   text-align: center;
   padding: 50px 0;
 }
 
+.hero-section p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+  color: #00b752;
+  padding-top: 7px;
+}
+
 .hero-section .home-hero p {
-  font-size: 10px; /* Larger "홈" */
+  font-size: 20px; /* Larger "홈" */
   font-weight: bold;
   margin-top: 20px;
 }
@@ -111,6 +122,23 @@ section h2 {
   ); /* Responsive grid */
   gap: 5px;
   margin-bottom: 5px;
+}
+
+#analog .container {
+  position: relative;
+  overflow: visible;
+}
+#analog .analog-swiper-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+  width: auto;
+}
+
+#analog .container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: orange;
+  transform: scale(1.5);
 }
 
 .portfolio-item {
@@ -129,6 +157,39 @@ section h2 {
 .portfolio-item h3 {
   font-size: 1.2em;
   color: #000000;
+}
+
+/* Swiper Slide Placeholder Styling */
+.swiper-slide .placeholder-box {
+  width: 100%;
+  padding-bottom: 100%; /* Maintain square aspect ratio */
+  background-color: #ccc; /* Light gray background */
+  border: 1px solid #999;
+  margin-bottom: 15px; /* Space below the placeholder */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  color: #666; /* Color for the text inside */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.swiper-slide {
+  display: flex; /* Make slides flexible */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center items horizontally within the slide */
+  background-color: #ffffff; /* White background for slides */
+  border: 1px solid #ddd;
+  padding: 15px; /* Add padding to the slide itself */
+  text-align: center; /* Center text within slide */
+}
+
+/* Optional: Style the text inside the slide (e.g., "Slide 1") */
+.swiper-slide h3 {
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #555;
 }
 
 /* Item Details */
